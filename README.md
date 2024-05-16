@@ -16,7 +16,6 @@ After you entered the website from above, choose "download zip to computer" and 
 The dataset will be named as "Littering.v8-yolotiny.yolov7pytorch". Move it to directory this repository, and it will look like:  
 <pre>
 <code>
-
 DL2024_Team4_Littering-main
 ├── __pycache__
 ├── cfg
@@ -30,11 +29,8 @@ DL2024_Team4_Littering-main
 ├── ...
 ├── train.py
 ├── train_aux.py
-  
-  
 </code>
 </pre>
-
 
 # Model
 The project is employed a state-of-the-art model, namely, you only look once v7(YOLOv7):  
