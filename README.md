@@ -6,6 +6,7 @@
 We use a littering dataset, namely, littering-whlsk_dataset from Roboflow Universe:  
 https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8/download/yolov7pytorch,   
 which contains 15000 training, 1168 validation, and 1232 testing images.  
+  
 Besides, there are some data arguments in the dataset:
 1. horizontal flip
 2. 30% maximum zoom
