@@ -19,7 +19,7 @@ Recently, it has the best performance in COCO dataset:
 Change the dictionary
 <pre>
 <code>
-cd "YOLOv7_dir"
+cd "YOLOv7_dictionary"
 </code>
 </pre>
 
@@ -33,7 +33,7 @@ python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering
 Testing
 <pre>
 <code>
-python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-size 1920 --source <testing_img_dir>
+python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-size 1920 --source "testing_img_dictionary"
 </code>
 </pre>
 
