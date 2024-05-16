@@ -31,11 +31,9 @@ python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering
 </pre>
 
 Testing
-<pre>
 <code>
 python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-size 1920 --source "testing_img_dictionary"
 </code>
-</pre>
 
 # Dataset Structure
 
