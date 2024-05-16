@@ -131,7 +131,35 @@ for NVIDIA RTX 2080 Ti, we highly recommend set the batch size as 1 to prevent O
 <code>
 python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering.yaml --img 1920 1080 --epochs 15 --cfg cfg/training/yolov7.yaml --weights '' --name "the name of weight" --hyp data/hyp.scratch.p5.yaml
 </code>
-</pre>
+</pre>   
+After finishing to train the model, the weight will be located at:
+
+<pre>
+<code>
+DL2024_Team4_Littering-main
+├── __pycache__
+├── cfg
+├── data
+├── ...
+├── runs
+│ ├──  train
+│ │ ├── "the name of weight"
+│ │ │ ├── weights
+│ │ │ │ ├── best.pt(this is the best weight of the model)
+│ │ │ │ ├── epoch_000.pt
+│ │ │ │ ├── epoch_010.pt
+│ │ │ │ ├── ...
+│ │ │ │ ├── init.pt
+│ │ │ │ ├── last.pt
+│ │ │ ├── confusion_matrix.png
+│ │ │ ├── ...
+│ │ │ ├── train_batch9.jpg
+
+
+  
+  
+</code>
+</pre>   
 
 # Testing
 <pre>
