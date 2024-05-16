@@ -31,15 +31,47 @@ Testing
 python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-size 1920 --source <testing_img_dir>
 '''
 
-# Nested Diagram Example
+## Dataset Structure
 
-Parent Node
-|
-|-- Child Node 1
-|   |-- Subchild Node 1
-|   `-- Subchild Node 2
-|
-`-- Child Node 2
-    |-- Subchild Node 3
-    `-- Subchild Node 4
-
+The dataset is organized as follows:
+train
+├── images
+│ ├── 0902_150000_151900 (Timestamp: Date_StartTime_EndTime)
+│ │ ├── 0_00001.jpg (CamID_FrameNum)
+│ │ ├── 0_00002.jpg
+│ │ ├── ...
+│ │ ├── 1_00001.jpg (CamID_FrameNum)
+│ │ ├── 1_00002.jpg
+│ │ ├── ...
+│ │ ├── 7_00001.jpg (CamID_FrameNum)
+│ │ ├── 7_00002.jpg
+│ ├── 0902_190000_191900 (Timestamp: Date_StartTime_EndTime)
+│ │ ├── 0_00001.jpg (CamID_FrameNum)
+│ │ ├── 0_00002.jpg
+│ │ ├── ...
+│ │ ├── 1_00001.jpg (CamID_FrameNum)
+│ │ ├── 1_00002.jpg
+│ │ ├── ...
+│ │ ├── 7_00001.jpg (CamID_FrameNum)
+│ │ ├── 7_00002.jpg
+│ │ ├── ...
+├── labels
+│ ├── 0902_150000_151900 (Timestamp: Date_StartTime_EndTime)
+│ │ ├── 0_00001.txt (CamID_FrameNum)
+│ │ ├── 0_00002.txt
+│ │ ├── ...
+│ │ ├── 1_00001.txt (CamID_FrameNum)
+│ │ ├── 1_00002.txt
+│ │ ├── ...
+│ │ ├── 7_00001.txt (CamID_FrameNum)
+│ │ ├── 7_00002.txt
+│ ├── 0902_190000_191900 (Timestamp: Date_StartTime_EndTime)
+│ │ ├── 0_00001.txt (CamID_FrameNum)
+│ │ ├── 0_00002.txt
+│ │ ├── ...
+│ │ ├── 1_00001.txt (CamID_FrameNum)
+│ │ ├── 1_00002.txt
+│ │ ├── ...
+│ │ ├── 7_00001.txt (CamID_FrameNum)
+│ │ ├── 7_00002.txt
+│ │ ├── ...
