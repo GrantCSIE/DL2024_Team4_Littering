@@ -5,7 +5,7 @@
 ## Information of the dataset
 We use a littering dataset, namely, littering-whlsk_dataset from Roboflow Universe:  
 https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8/download/yolov7pytorch,   
-which contains 15000 training, 1168 validation, 1232 testing images.  
+which contains 15000 training, 1168 validation, and 1232 testing images.  
 Besides, there are some data arguments in the dataset including horizontal flip, 30% maximum zoom, 15 degrees horizontal   shear,  15 degrees vertical shear, applying 10 percent of images to grayscale, limiting hue between -25 degrees and 25 degrees, and 5 percent of pixels of bounding box are noised.
 
 ## How to feeding the dataset into the model
