@@ -13,3 +13,31 @@ https://github.com/WongKinYiu/yolov7?tab=readme-ov-file
 Recently, it has the best performance in COCO dataset:  
 ![image](https://raw.githubusercontent.com/WongKinYiu/yolov7/main/figure/performance.png)  
 
+
+
+# Training
+Change the dictionary
+'''
+cd <YOLOv7_dir>
+'''
+
+Single GPU training
+'''
+python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering.yaml --img 1920 1080 --epochs 15 --cfg cfg/training/yolov7.yaml --weights 'test' --name v7_0514 --hyp data/hyp.scratch.p5.yaml
+'''
+
+Testing
+'''
+python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-size 1920 --source <testing_img_dir>
+'''
+
+# Nested Diagram Example
+
+- Parent Node
+  - Child Node 1
+    - Subchild Node 1
+    - Subchild Node 2
+  - Child Node 2
+    - Subchild Node 3
+    - Subchild Node 4
+
