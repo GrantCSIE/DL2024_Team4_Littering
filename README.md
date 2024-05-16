@@ -154,12 +154,8 @@ DL2024_Team4_Littering-main
 │ │ │ ├── confusion_matrix.png
 │ │ │ ├── ...
 │ │ │ ├── train_batch9.jpg
-
-
-  
-  
 </code>
-</pre>   
+</pre>
 
 # Testing
 <pre>
