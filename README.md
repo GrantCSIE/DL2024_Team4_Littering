@@ -19,19 +19,23 @@ Recently, it has the best performance in COCO dataset:
 Change the dictionary
 <pre>
 <code>
-cd YOLOv7_dir
+cd "YOLOv7_dir"
 </code>
 </pre>
 
 Single GPU training
-'''
+<pre>
+<code>
 python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering.yaml --img 1920 1080 --epochs 15 --cfg cfg/training/yolov7.yaml --weights 'test' --name v7_0514 --hyp data/hyp.scratch.p5.yaml
-'''
+</code>
+</pre>
 
 Testing
-'''
+<pre>
+<code>
 python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-size 1920 --source <testing_img_dir>
-'''
+</code>
+</pre>
 
 # Dataset Structure
 
