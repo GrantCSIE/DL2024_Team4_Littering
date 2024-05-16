@@ -19,7 +19,7 @@ Recently, it has the best performance in COCO dataset:
 Change the dictionary
 <pre>
 <code>
-cd <YOLOv7_dir>
+cd YOLOv7_dir
 </code>
 </pre>
 
