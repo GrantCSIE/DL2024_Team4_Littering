@@ -127,7 +127,7 @@ cd "YOLOv7_path"
 Single GPU training
 <pre>
 <code>
-python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering.yaml --img 1920 1080 --epochs 15 --cfg cfg/training/yolov7.yaml --weights 'test' --name v7_0514 --hyp data/hyp.scratch.p5.yaml
+python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering.yaml --img 1920 1080 --epochs 15 --cfg cfg/training/yolov7.yaml --weights '' --name "the name of weight" --hyp data/hyp.scratch.p5.yaml
 </code>
 </pre>
 
