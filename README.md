@@ -33,11 +33,13 @@ python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-
 
 # Nested Diagram Example
 
-- Parent Node
-  - Child Node 1
-    - Subchild Node 1
-    - Subchild Node 2
-  - Child Node 2
-    - Subchild Node 3
-    - Subchild Node 4
+Parent Node
+|
+|-- Child Node 1
+|   |-- Subchild Node 1
+|   `-- Subchild Node 2
+|
+`-- Child Node 2
+    |-- Subchild Node 3
+    `-- Subchild Node 4
 
