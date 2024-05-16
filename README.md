@@ -125,7 +125,7 @@ cd "YOLOv7_path"
 </pre>
 
 Single GPU training   
-for NVIDIA RTX 2080 Ti, we highly recommend set the batch size as 1.  
+for NVIDIA RTX 2080 Ti, we highly recommend set the batch size as 1 to prevent OOM.  
 
 <pre>
 <code>
