@@ -145,7 +145,7 @@ DL2024_Team4_Littering-main
 │ ├──  train
 │ │ ├── "the name of weight"
 │ │ │ ├── weights
-│ │ │ │ ├── best.pt(this is the best weight of the model)
+│ │ │ │ ├── best.pt (this is the best weight of the model)
 │ │ │ │ ├── epoch_000.pt
 │ │ │ │ ├── epoch_010.pt
 │ │ │ │ ├── ...
@@ -154,6 +154,11 @@ DL2024_Team4_Littering-main
 │ │ │ ├── confusion_matrix.png
 │ │ │ ├── ...
 │ │ │ ├── train_batch9.jpg
+├── .gitignore
+├── detect.py
+├── ...
+├── train.py
+├── train_aux.py
 </code>
 </pre>
 
@@ -161,5 +166,26 @@ DL2024_Team4_Littering-main
 <pre>
 <code>
 python detect.py --weights "weight_path" --conf 0.25 --img-size 1920 --source "testing_img_path"
+</code>
+</pre>
+
+After testing with custom images or video, the results will be located at:
+
+<pre>
+<code>
+DL2024_Team4_Littering-main
+├── __pycache__
+├── cfg
+├── data
+├── ...
+├── runs
+│ ├──  detect
+│ │ ├── "the name of weight"
+│ │ │ ├── exp (the results will located here)  
+├── .gitignore
+├── detect.py
+├── ...
+├── train.py
+├── train_aux.py
 </code>
 </pre>
