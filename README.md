@@ -131,7 +131,7 @@ python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering
 </code>
 </pre>
 
-Testing
+# Testing
 <pre>
 <code>
 python detect.py --weights "weight_path" --conf 0.25 --img-size 1920 --source "testing_img_path"
