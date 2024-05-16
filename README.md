@@ -39,13 +39,7 @@ python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-
 
 # Dataset Structure
 
-## Train Directory Structure
-
-### Images
-
-<pre>
-<code>
-train  
+## train  
 ├── images  
 │ ├── video_1_1_jpg.rf.0be38e966cef7fc7471a0a8bffa7b1eb.jpg
 │ ├── video_1_1_jpg.rf.1cf33b16b1319e73fdc5789d42186e18.jpg
@@ -65,7 +59,7 @@ train
 │ ├── video_12_30_jpg.rf.2e1837fe76a3b97ebf35c10adf25c206.txt
 │ ├── video_12_30_jpg.rf.3a489ff20cfa47f030001235ff86da24.txt
   
-valid
+## valid
 ├── images  
 │ ├── video_1_1_jpg.rf.2a8c7343fe6c5aa59f2a28a18cd5b839.jpg
 │ ├── video_1_1_jpg.rf.42a3806529c18b21d191131c870f3f1c.jpg
@@ -84,7 +78,7 @@ valid
 │ ├── ...  
 │ ├── video_12_30_jpg.rf.0669bfff657d45c74b047082cf4609c0.txt
 │ ├── video_12_30_jpg.rf.d6f9012b09117f369dddae9544af880b.txt
-test
+## test
 ├── images  
 │ ├── video_1_1_jpg.rf.1f706338279dea3181448a9ed38e7877.jpg
 │ ├── video_1_1_jpg.rf.4e3d07b524f1aa7437a590d9d071b84e.jpg
