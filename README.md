@@ -17,9 +17,11 @@ Recently, it has the best performance in COCO dataset:
 
 # Training
 Change the dictionary
-'''
+<pre>
+<code>
 cd <YOLOv7_dir>
-'''
+</code>
+</pre>
 
 Single GPU training
 '''
