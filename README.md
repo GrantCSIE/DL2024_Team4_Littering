@@ -11,7 +11,7 @@ Besides, there are some data arguments in the dataset including horizontal flip,
 ## How to feeding the dataset into the model
 
 After you entered the website from above, choose "download zip to computer" and "continue", the dataset will be downloaded.
-![image](https://raw.githubusercontent.com/GrantCSIE/DL2024_Team4_Littering/main/Illustrated%20image/dataset%20download.jpg?token=GHSAT0AAAAAACSLZ7HU76ZEW5M2VPIK2Z6QZSFZSSA)
+![image][https://raw.githubusercontent.com/GrantCSIE/DL2024_Team4_Littering/main/Illustrated%20image/dataset%20download.jpg?token=GHSAT0AAAAAACSLZ7HVNDFHEB2FA2TME4BEZSFZVXA]
 
 The dataset
 
