@@ -1,0 +1,13 @@
+train: ./Littering.v8-yolotiny.yolov7pytorch/train/images
+val: ./Littering.v8-yolotiny.yolov7pytorch/valid/images
+test: ./Littering.v8-yolotiny.yolov7pytorch/test/images
+
+nc: 1
+names: ['littering']
+
+roboflow:
+  workspace: thesis-kztn8
+  project: littering-whlsk
+  version: 8
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8
