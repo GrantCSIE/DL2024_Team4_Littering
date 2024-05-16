@@ -13,6 +13,31 @@ Besides, there are some data arguments in the dataset including horizontal flip,
 After you entered the website from above, choose "download zip to computer" and "continue", the dataset will be downloaded.
 ![image](https://raw.githubusercontent.com/GrantCSIE/DL2024_Team4_Littering/main/Illustrated%20image/dataset%20download.jpg?token=GHSAT0AAAAAACSLZ7HVNDFHEB2FA2TME4BEZSFZVXA)    
 
+The dataset will be named as "Littering.v8-yolotiny.yolov7pytorch". Move it to directory this repository, and it will look like:  
+<pre>
+<code>
+
+├── images  
+│ ├── video_1_1_jpg.rf.0be38e966cef7fc7471a0a8bffa7b1eb.jpg
+│ ├── video_1_1_jpg.rf.1cf33b16b1319e73fdc5789d42186e18.jpg
+│ ├── ...  
+│ ├── video_1_2_jpg.rf.1cce7cbaa210f71ba05dae70e307bbfd.jpg
+│ ├── video_1_2_jpg.rf.2ccc58c4e2cd3eeec7bb39e9efa7ffe6.jpg
+│ ├── ...  
+│ ├── video_12_30_jpg.rf.2e1837fe76a3b97ebf35c10adf25c206.jpg
+│ ├── video_12_30_jpg.rf.3a489ff20cfa47f030001235ff86da24.jpg
+├── label
+│ ├── video_1_1_jpg.rf.0be38e966cef7fc7471a0a8bffa7b1eb.txt
+│ ├── video_1_1_jpg.rf.1cf33b16b1319e73fdc5789d42186e18.txt
+│ ├── ...  
+│ ├── video_1_2_jpg.rf.1cce7cbaa210f71ba05dae70e307bbfd.txt
+│ ├── video_1_2_jpg.rf.2ccc58c4e2cd3eeec7bb39e9efa7ffe6.txt
+│ ├── ...  
+│ ├── video_12_30_jpg.rf.2e1837fe76a3b97ebf35c10adf25c206.txt
+│ ├── video_12_30_jpg.rf.3a489ff20cfa47f030001235ff86da24.txt
+</code>
+</pre>
+
 
 # Model
 The project is employed a state-of-the-art model, namely, you only look once v7(YOLOv7):  
