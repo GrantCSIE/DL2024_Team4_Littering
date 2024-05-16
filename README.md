@@ -17,24 +17,21 @@ The dataset will be named as "Littering.v8-yolotiny.yolov7pytorch". Move it to d
 <pre>
 <code>
 
-├── images  
-│ ├── video_1_1_jpg.rf.0be38e966cef7fc7471a0a8bffa7b1eb.jpg
-│ ├── video_1_1_jpg.rf.1cf33b16b1319e73fdc5789d42186e18.jpg
-│ ├── ...  
-│ ├── video_1_2_jpg.rf.1cce7cbaa210f71ba05dae70e307bbfd.jpg
-│ ├── video_1_2_jpg.rf.2ccc58c4e2cd3eeec7bb39e9efa7ffe6.jpg
-│ ├── ...  
-│ ├── video_12_30_jpg.rf.2e1837fe76a3b97ebf35c10adf25c206.jpg
-│ ├── video_12_30_jpg.rf.3a489ff20cfa47f030001235ff86da24.jpg
-├── label
-│ ├── video_1_1_jpg.rf.0be38e966cef7fc7471a0a8bffa7b1eb.txt
-│ ├── video_1_1_jpg.rf.1cf33b16b1319e73fdc5789d42186e18.txt
-│ ├── ...  
-│ ├── video_1_2_jpg.rf.1cce7cbaa210f71ba05dae70e307bbfd.txt
-│ ├── video_1_2_jpg.rf.2ccc58c4e2cd3eeec7bb39e9efa7ffe6.txt
-│ ├── ...  
-│ ├── video_12_30_jpg.rf.2e1837fe76a3b97ebf35c10adf25c206.txt
-│ ├── video_12_30_jpg.rf.3a489ff20cfa47f030001235ff86da24.txt
+DL2024_Team4_Littering-main
+├── __pycache__
+├── cfg
+├── data
+├── ...
+├── tools
+├── utils
+├── Littering.v8-yolotiny.yolov7pytorch (this folder is the downloaded dataset of littering images)
+├── .gitignore
+├── detect.py
+├── ...
+├── train.py
+├── train_aux.py
+  
+  
 </code>
 </pre>
 
