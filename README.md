@@ -43,7 +43,8 @@ python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-
 
 ### Images
 
-<script>
+<pre>
+<code>
 train  
 ├── images  
 │ ├── 0902_150000_151900 (Timestamp: Date_StartTime_EndTime)  
@@ -61,4 +62,5 @@ train
 │ │ ├── ...  
 │ │ ├── 1_00001.jpg (CamID_FrameNum)  
 │ │ ├── 1_00002.jpg  
-</script>
+</code>
+</pre>
