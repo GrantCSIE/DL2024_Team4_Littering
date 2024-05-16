@@ -39,7 +39,7 @@ python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-
 
 # Dataset Structure
 
-## train
+## training set
 <pre>
 <code>  
 ├── images  
@@ -63,7 +63,7 @@ python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-
 </code>
 </pre>
 
-## valid
+## validation set
 <pre>
 <code>  
 ├── images  
@@ -87,9 +87,9 @@ python detect.py --weights runs/train/v7_0514/weights/best.pt --conf 0.25 --img-
 </code>
 </pre>
 
+## testing set
 <pre>
 <code>  
-## test
 ├── images  
 │ ├── video_1_1_jpg.rf.1f706338279dea3181448a9ed38e7877.jpg
 │ ├── video_1_1_jpg.rf.4e3d07b524f1aa7437a590d9d071b84e.jpg
