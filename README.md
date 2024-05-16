@@ -124,7 +124,9 @@ cd "YOLOv7_path"
 </code>
 </pre>
 
-Single GPU training
+Single GPU training   
+for NVIDIA RTX 2080 Ti, we highly recommend set the batch size as 1.  
+
 <pre>
 <code>
 python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering.yaml --img 1920 1080 --epochs 15 --cfg cfg/training/yolov7.yaml --weights '' --name "the name of weight" --hyp data/hyp.scratch.p5.yaml
