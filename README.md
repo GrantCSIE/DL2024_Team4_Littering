@@ -2,7 +2,7 @@
 2024 CCU Introduction to deep learning final project
 
 # Dataset
-## Information of the dataset
+## Information
 We use a littering dataset, namely, littering-whlsk_dataset from Roboflow Universe:  
 https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8/download/yolov7pytorch,   
 which contains 15000 training, 1168 validation, and 1232 testing images.  
