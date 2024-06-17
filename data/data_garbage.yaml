@@ -1,0 +1,13 @@
+train: ./dataset/train/images
+val: ./dataset/valid/images
+test: ./dataset/test/images
+
+nc: 3
+names: ['garbage', 'paper', 'plastic']
+
+roboflow:
+  workspace: sih-2023-ngope
+  project: garbage_yolov7
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/sih-2023-ngope/garbage_yolov7/dataset/1

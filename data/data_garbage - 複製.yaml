@@ -1,0 +1,12 @@
+train: ./dataset/train/images
+val: ./dataset/valid/images
+test: ./dataset/test/images
+
+nc: 1
+names: ['trash']
+roboflow:
+  workspace: ved-borkar-pmmde
+  project: trash-bag-detector-iqkno
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ved-borkar-pmmde/trash-bag-detector-iqkno/dataset/2
