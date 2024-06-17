@@ -11,6 +11,13 @@ We use some datasets
    [https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8/download/yolov7pytorch](https://universe.roboflow.com/tip-m0-0r/m0t0rcycl3/dataset/2),  
   which contains 13988 training, 1998 validation, and 999 testing images.
 
+
+## Download weights
+Step 1: Download our best weights:  
+[best garbage model](https://drive.google.com/file/d/1tE0HEUrhzbZ0iKt_7t802HDco0RD_AP7/view?usp=sharing)  
+[best scooter model](https://drive.google.com/file/d/15-5UNSwIoHjSbdX1A_6vFiHGLfuN9Bud/view?usp=sharing)  
+Step 2: Move the weights into the root folder of repository.
+
 ## Dataset Structure
 
 ### training set
