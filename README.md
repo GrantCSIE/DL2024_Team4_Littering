@@ -244,4 +244,4 @@ python ./detect_label/find_littering.py
 </code>
 </pre>
 The result will be shown on command prompt like this:
-
+![image](https://github.com/GrantCSIE/DL2024_Team4_Littering/blob/master/result.jpg)
