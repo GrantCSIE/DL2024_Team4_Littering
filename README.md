@@ -3,18 +3,13 @@
 
 # Dataset
 ## Information of the dataset
-We use a littering dataset, namely, littering-whlsk_dataset from Roboflow Universe:  
-https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8/download/yolov7pytorch,   
-which contains 15000 training, 1168 validation, and 1232 testing images.  
-  
-Besides, there are some data arguments in the dataset:
-1. horizontal flip
-2. 30% maximum zoom
-3. 15 degrees horizontal shear
-4. 15 degrees vertical shear
-5. applying 10 percent of images to grayscale
-6. limiting hue between -25 degrees and 25 degrees
-7. 5 percent of pixels of bounding box are noised.
+We use some datasets
+1. m0t0rcycl3 from Roboflow Universe:  
+  [https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8/download/yolov7pytorch](https://universe.roboflow.com/tip-m0-0r/m0t0rcycl3/dataset/2),   
+  which contains 4908 training, 751 validation, and 764 testing images.
+2. Trash Bag Detector Image from Roboflow Universe:  
+   [https://universe.roboflow.com/thesis-kztn8/littering-whlsk/dataset/8/download/yolov7pytorch](https://universe.roboflow.com/tip-m0-0r/m0t0rcycl3/dataset/2),  
+  which contains 13988 training, 1998 validation, and 999 testing images.
 
 ## Dataset Structure
 
@@ -91,13 +86,13 @@ Besides, there are some data arguments in the dataset:
 </pre>
 
 
-## How to feeding the dataset into the model
+## How to feed the dataset into the model
 
-After you entered the website from above, choose "download zip to computer" and "continue", and the dataset will be downloaded.  
+After you enter the website from above, choose "download zip to computer" and "continue", and the dataset will be downloaded.  
 
-![image](https://raw.githubusercontent.com/GrantCSIE/DL2024_Team4_Littering/main/Illustrated%20image/dataset%20download.jpg?token=GHSAT0AAAAAACSLZ7HVV5GLW2INIRYGRSBQZSF2JGQ)    
-
-The dataset is named as "Littering.v8-yolotiny.yolov7pytorch". Move it to this repository, and the repository will look like:  
+Rename the folder of first and second datasets as "dataset_scooter" and "dataset_garbage", respectively.  
+  
+Move them to this repository, and the repository will look like:  
 <pre>
 <code>
 DL2024_Team4_Littering-main
@@ -107,7 +102,8 @@ DL2024_Team4_Littering-main
 ├── ...
 ├── tools
 ├── utils
-├── Littering.v8-yolotiny.yolov7pytorch (this folder is the downloaded dataset of littering images)
+├── dataset_scooter (this folder is the downloaded dataset of images containing scooters)
+├── dataset_garbage (this folder is the downloaded dataset of images containing garbage bags)
 ├── .gitignore
 ├── detect.py
 ├── ...
@@ -132,12 +128,21 @@ cd "YOLOv7_path"
 </code>
 </pre>
 
-Single GPU training   
+Single GPU training for training the model with garbage dataset (we will call it as garbage model later).  
 for NVIDIA RTX 2080 Ti, we highly recommend set the batch size as 1 to prevent OOM.  
 
 <pre>
 <code>
-python train.py --workers 8 --device 0 --batch-size 1 --data data/data_littering.yaml --img 1920 1080 --epochs 15 --cfg cfg/training/yolov7.yaml --weights '' --name "the name of weight" --hyp data/hyp.scratch.p5.yaml
+python train.py --workers 8 --device 0 --batch-size 1 --data data/data_garbage.yaml --img 640 640 --epochs 50 --cfg cfg/training/yolov7.yaml --weights 'path of pretrained model' --name "the name of weight" --hyp data/hyp.scratch.p5.yaml # this is training the model which detect the garbage bags 
+</code>
+</pre>   
+
+Single GPU training for training the model with scooter dataset (we will call it as scooter model later).  
+for NVIDIA RTX 2080 Ti, we highly recommend set the batch size as 1 to prevent OOM.  
+
+<pre>
+<code>
+python train.py --workers 8 --device 0 --batch-size 1 --data data/data_scooter.yaml --img 640 640 --epochs 50 --cfg cfg/training/yolov7.yaml --weights 'path of pretrained model' --name "the name of weight" --hyp data/hyp.scratch.p5.yaml # this is training the model which detect the scooters (scooter model)
 </code>
 </pre>   
 After finishing to train the model, the weight will be located at:
@@ -150,7 +155,7 @@ DL2024_Team4_Littering-main
 ├── data
 ├── ...
 ├── runs
-│ ├──  train
+│ ├── train
 │ │ ├── "the name of weight"
 │ │ │ ├── weights
 │ │ │ │ ├── best.pt (this is the best weight of the model)
@@ -173,7 +178,7 @@ DL2024_Team4_Littering-main
 # Testing
 <pre>
 <code>
-python detect.py --weights "weight_path" --conf 0.25 --img-size 1920 --source "testing_img_path"
+python detect.py --weights "weight_path" --conf 0.25 --img-size 1280 --source "testing_img_path" --save-txt
 </code>
 </pre>
 
@@ -187,9 +192,11 @@ DL2024_Team4_Littering-main
 ├── data
 ├── ...
 ├── runs
-│ ├──  detect
+│ ├── detect
 │ │ ├── "the name of weight"
-│ │ │ ├── exp (the results will located here)  
+│ │ │ ├── exp (the results will located here)
+│ │ │ │ ├── labels
+│ │ │ │ ├── *.mp4
 ├── .gitignore
 ├── detect.py
 ├── ...
@@ -197,3 +204,37 @@ DL2024_Team4_Littering-main
 ├── train_aux.py
 </code>
 </pre>
+
+# Detect littering
+
+If you are using the "scooter Model" to detect the body of scooter in the video, move "labels" folder in "exp" folder to "exp_motor" in "detect_label" folder,
+otherwise, move "labels" folder in "exp" folder to "exp_garbage" in "detect_label" folder.
+
+<pre>
+<code>
+DL2024_Team4_Littering-main
+├── __pycache__
+├── cfg
+├── data
+├── ...
+├── runs
+├── detect_label
+│ ├── exp_motor
+│ ├── exp_garbage
+│ ├── find_littering.py
+├── .gitignore
+├── detect.py
+├── ...
+├── train.py
+├── train_aux.py
+</code>
+</pre>
+
+After that, execute find_littering.py in "detect_label" folder or executing:
+<pre>
+<code>
+python ./detect_label/find_littering.py
+</code>
+</pre>
+The result will be shown on command prompt like this:
+
